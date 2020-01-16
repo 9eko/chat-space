@@ -28,7 +28,7 @@ group_id|integer|null: false, foreign_key: true|
 
 |Column|Type|Option|
 |------|----|------|
-groupname|stirng|null: false, add_index|
+groupname|stirng|index: true, null: false|
 
 ### Association
 - has_many :groups_users
@@ -40,7 +40,7 @@ groupname|stirng|null: false, add_index|
 |Column|Type|Option|
 |------|----|------|
 body|text|add_index|
-image|string||
+image|text||
 group_id|integer|null: false, foreign_key: true|
 user_id|integer|null: false, foreign_key: true|
 
