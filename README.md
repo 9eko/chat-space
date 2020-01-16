@@ -39,7 +39,7 @@ groupname|stirng|index: true, null: false|
 
 |Column|Type|Option|
 |------|----|------|
-body|text|add_index|
+body|text|index: true|
 image|text||
 group_id|integer|null: false, foreign_key: true|
 user_id|integer|null: false, foreign_key: true|
