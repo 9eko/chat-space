@@ -73,11 +73,30 @@
       background-color: #ffffff;
       border-style: solid;
       border-width: thin;
-      border-bottom-color: #eeeeee;
-      border-top-color: transparent;
-      border-left-color: transparent;
-      border-right-color: transparent;
+      border-color: transparent transparent #eeeeee;
       height: 100px;
+      .a {
+        &__name {
+          color: #333333;
+          font-size: 20px;
+        }
+        &__member {
+          color: #999999;
+          font-size: 12px;
+        }
+        &__edit {
+          height: 40px;
+          width: 72px;
+          color: #38aef0;
+          font-size: 16px;
+          line-height: 40px;
+          border: thin solid #38aef0;
+          a {
+            text-decoration: none;
+            padding: 0 20px 0;
+          }
+        }
+      }
     }
     &__message-list {
       background-color: #fafafa;
