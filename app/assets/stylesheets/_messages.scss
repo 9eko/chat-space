@@ -76,24 +76,37 @@
       border-color: transparent transparent #eeeeee;
       height: 100px;
       .a {
-        &__name {
-          color: #333333;
-          font-size: 20px;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        .l {
+          display: flex;
+          flex-direction: column;
+          &__name {
+            color: #333333;
+            font-size: 20px;
+            margin: 35px 0 15px;
+          }
+          &__member {
+            color: #999999;
+            font-size: 12px;
+          }
         }
-        &__member {
-          color: #999999;
-          font-size: 12px;
-        }
-        &__edit {
-          height: 40px;
-          width: 72px;
-          color: #38aef0;
-          font-size: 16px;
-          line-height: 40px;
-          border: thin solid #38aef0;
-          a {
-            text-decoration: none;
-            padding: 0 20px 0;
+        .r {
+          display: flex;
+          &__edit {
+            margin-left: auto;
+            margin-top: 28px;
+            height: 40px;
+            width: 72px;
+            color: #38aef0;
+            font-size: 16px;
+            line-height: 40px;
+            border: thin solid #38aef0;
+            a {
+              text-decoration: none;
+              padding: 0 20px 0;
+            }
           }
         }
       }
