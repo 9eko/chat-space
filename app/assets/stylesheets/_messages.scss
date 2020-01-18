@@ -78,7 +78,7 @@
       .a {
         padding: 0 40px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; /*refactoringしたい*/
         .l {
           display: flex;
           flex-direction: column;
@@ -114,6 +114,29 @@
     &__message-list {
       background-color: #fafafa;
       height: calc(100vh - 100px - 90px);
+      padding-left: 40px;
+      .message {
+        &__info {
+          padding-top: 35px; /**/
+          display: flex;
+          &__talker {
+            height: 16px;
+            color: #333333;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          &__timestamp {
+            margin-left: 10px;
+            color: #999999;
+            font-size: 12px;
+          }
+        }
+        &__text {
+          color: #434A54;
+          font-size: 14px;
+          margin-top: 12px;
+        }
+      }
     }
     &__message-form {
       background-color: #d2d2d2;
