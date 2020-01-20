@@ -1,0 +1,16 @@
+.side-bar
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name
+        name
+      .side-header__box__menu
+        =link_to "#", class: "btn" do
+          = icon('fas', 'edit')
+        =link_to "#", class: "btn" do
+          = icon('fas', 'cog')
+  .groups
+    .group
+      %p.group__name
+        group-name
+      %p.group__last-message
+        まだメッセージがありません
