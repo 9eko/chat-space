@@ -28,3 +28,10 @@
       %p.message__text
         あけおめ！
   .main-chat__message-form
+    %form.new-message
+      .input-box
+        %input.input-box__text{:placeholder => "type a message", :type => "text"}
+        %label.input-box__image
+          = icon('far', 'image')
+          %input.input-box__image__file(type="file")
+      %input.submit-btn{:type => "submit", :value => "Send"}
