@@ -7,24 +7,24 @@
   .side-bar {
     float: left;
     width: 300px;
-    &__user-name {
+    .side-header {
       background-color: #253141;
       height: 100px;
       display: flex;
       align-items: center;
-      .top-items {
+      &__box {
         height: 20px;
         width: 260px;
         margin: 0 20px;
         display: flex;
         justify-content: space-between;
-        &__name {
+        &__user-name {
           color: #ffffff;
           font-size: 16px;
           font-weight: bold;
           text-align: center;
         }
-        &__icons {
+        &__menu {
           display: flex;
           justify-content: flex-end;
           align-items: center;
@@ -36,7 +36,7 @@
         }
       }
     }
-    &__group-list {
+    .groups {
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       .group {
@@ -69,45 +69,43 @@
   .main-chat {
     float: right;
     width: calc(100vw - 300px);
-    &__group-info {
+    .main-header {
       background-color: #ffffff;
       border-bottom: solid thin #eeeeee;
       height: 100px;
-      .a {
-        padding: 0 40px;
-        display: flex;
-        justify-content: space-between; /*refactoringしたい*/
-        .l {
-          margin-top: 35px;
-          &__name {
-            color: #333333;
-            font-size: 20px;
-            margin-bottom: 15px;
-          }
-          &__member-list {
-            color: #999999;
-            font-size: 12px;
-            display: flex;
-            &__member {
-              margin-left: 5px;
-            }
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      &__left-box {
+        margin-top: 35px;
+        &__current-group {
+          color: #333333;
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+        &__member-list {
+          color: #999999;
+          font-size: 12px;
+          display: flex;
+          &__member {
+            margin-left: 5px;
           }
         }
-        .r {
-          display: flex;
-          &__edit {
-            margin-left: auto;
-            margin-top: 28px;
-            height: 40px;
-            width: 72px;
-            color: #38aef0;
-            font-size: 16px;
-            line-height: 40px;
-            border: thin solid #38aef0;
-            a {
-              text-decoration: none;
-              padding: 0 20px 0;
-            }
+      }
+      .r {
+        display: flex;
+        &__edit {
+          margin-left: auto;
+          margin-top: 28px;
+          height: 40px;
+          width: 72px;
+          color: #38aef0;
+          font-size: 16px;
+          line-height: 40px;
+          border: thin solid #38aef0;
+          a {
+            text-decoration: none;
+            padding: 0 20px 0;
           }
         }
       }

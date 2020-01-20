@@ -1,19 +1,18 @@
 .main-chat
-  .main-chat__group-info
-    .a
-      .l
-        %h2.l__name
-          group
-        %ul.l__member-list
-          Member :
-          %li.l__member-list__member
-            a
-          %li.l__member-list__member
-            a
-      .r
-        .r__edit
-          =link_to "#", class: "btn" do
-            Edit
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group
+        group
+      %ul.main-header__left-box__member-list
+        Member :
+        %li.main-header__left-box__member-list__member
+          name
+        %li.main-header__left-box__member-list__member
+          a
+    .r
+      .r__edit
+        =link_to "#", class: "btn" do
+          Edit
   .main-chat__message-list
     .message
       .message__info

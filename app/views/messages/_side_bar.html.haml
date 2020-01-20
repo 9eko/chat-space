@@ -1,14 +1,14 @@
 .side-bar
-  .side-bar__user-name
-    .top-items
-      .top-items__name
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name
         name
-      .top-items__icons
+      .side-header__box__menu
         =link_to "#", class: "btn" do
           = icon('fas', 'edit')
         =link_to "#", class: "btn" do
           = icon('fas', 'cog')
-  .side-bar__group-list
+  .groups
     .group
       %p.group__name
         group-name
