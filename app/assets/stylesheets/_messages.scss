@@ -65,6 +65,7 @@
       padding: 0 40px;
       display: flex;
       justify-content: space-between;
+      overflow: scroll;
       &__left-box {
         margin-top: 35px;
         &__current-group {
