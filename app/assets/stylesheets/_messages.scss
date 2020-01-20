@@ -71,25 +71,26 @@
     width: calc(100vw - 300px);
     &__group-info {
       background-color: #ffffff;
-      border-style: solid;
-      border-width: thin;
-      border-color: transparent transparent #eeeeee;
+      border-bottom: solid thin #eeeeee;
       height: 100px;
       .a {
         padding: 0 40px;
         display: flex;
         justify-content: space-between; /*refactoringしたい*/
         .l {
-          display: flex;
-          flex-direction: column;
+          margin-top: 35px;
           &__name {
             color: #333333;
             font-size: 20px;
-            margin: 35px 0 15px;
+            margin-bottom: 15px;
           }
-          &__member {
+          &__member-list {
             color: #999999;
             font-size: 12px;
+            display: flex;
+            &__member {
+              margin-left: 5px;
+            }
           }
         }
         .r {

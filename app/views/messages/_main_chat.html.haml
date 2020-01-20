@@ -2,10 +2,14 @@
   .main-chat__group-info
     .a
       .l
-        .l__name
+        %h2.l__name
           group
-        .l__member
-          Member : name
+        %ul.l__member-list
+          Member :
+          %li.l__member-list__member
+            a
+          %li.l__member-list__member
+            a
       .r
         .r__edit
           =link_to "#", class: "btn" do
