@@ -92,22 +92,16 @@
           }
         }
       }
-      .r {
-        display: flex;
-        &__edit {
-          margin-left: auto;
-          margin-top: 28px;
-          height: 40px;
-          width: 72px;
-          color: #38aef0;
-          font-size: 16px;
-          line-height: 40px;
-          border: thin solid #38aef0;
-          a {
-            text-decoration: none;
-            padding: 0 20px 0;
-          }
-        }
+      .edit-btn {
+        margin: 28px 0 0 auto;
+        height: 40px;
+        width: 72px;
+        color: #38aef0;
+        font-size: 16px;
+        line-height: 40px;
+        border: thin solid #38aef0;
+        text-decoration: none;
+        padding: 0 20px;
       }
     }
     &__message-list {
