@@ -114,13 +114,14 @@
     &__message-list {
       background-color: #fafafa;
       height: calc(100vh - 100px - 90px);
-      padding-left: 40px;
+      padding: 35px 40px;
+      overflow: scroll;
       .message {
+        padding-bottom: 46px;
         &__info {
-          padding-top: 35px; /**/
+          margin-bottom: 12px;
           display: flex;
           &__talker {
-            height: 16px;
             color: #333333;
             font-size: 16px;
             font-weight: bold;
@@ -134,7 +135,6 @@
         &__text {
           color: #434A54;
           font-size: 14px;
-          margin-top: 12px;
         }
       }
     }
