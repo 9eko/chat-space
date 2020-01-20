@@ -35,8 +35,8 @@ $btn-color: #38aef0;
           align-items: center;
           .btn {
             color: #ffffff;
-            font-size: 0.8rem; /*他に方法があるんじゃないか*/
-            margin-left: 5px; /*他に方法があるんじゃないか*/
+            font-size: 0.8rem;
+            margin-left: 5px;
           }
         }
       }
@@ -50,13 +50,11 @@ $btn-color: #38aef0;
         &__name {
           font-size: 15px;
           color: #ffffff;
-          /* font-weight: bold; カリキュラム参照*/
           margin-bottom: 5px;
         }
         &__last-message {
           font-size: 11px;
           color: #ffffff;
-          /* font-weight: bold; カリキュラム参照*/
         }
       }
     }
