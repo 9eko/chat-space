@@ -2,14 +2,20 @@
   box-sizing: border-box;
 }
 
+$header-height: 100px;
+$side-bar-width: 300px;
+$message-form-height: 90px;
+$main-name-color: #333333;
+$btn-color: #38aef0;
+
 .wrapper {
   height: 100vh;
   .side-bar {
     float: left;
-    width: 300px;
+    width: $side-bar-width;
     .side-header {
       background-color: #253141;
-      height: 100px;
+      height: $header-height;
       display: flex;
       align-items: center;
       padding: 0 20px;
@@ -37,7 +43,7 @@
     }
     .groups {
       background-color: #2f3e51;
-      height: calc(100vh - 100px);
+      height: calc(100vh - #{$header-height});
       padding: 20px 20px;
       .group {
         margin-bottom: 40px;
@@ -57,11 +63,11 @@
   }
   .main-chat {
     float: right;
-    width: calc(100vw - 300px);
+    width: calc(100vw - #{$side-bar-width});
     .main-header {
       background-color: #ffffff;
       border-bottom: solid thin #eeeeee;
-      height: 100px;
+      height: $header-height;
       padding: 0 40px;
       display: flex;
       justify-content: space-between;
@@ -69,7 +75,7 @@
       &__left-box {
         margin-top: 35px;
         &__current-group {
-          color: #333333;
+          color: $main-name-color;
           font-size: 20px;
           margin-bottom: 15px;
         }
@@ -86,17 +92,17 @@
         margin: 28px 0 0 auto;
         height: 40px;
         width: 72px;
-        color: #38aef0;
+        color: $btn-color;
         font-size: 16px;
         line-height: 40px;
-        border: thin solid #38aef0;
+        border: thin solid $btn-color;
         text-decoration: none;
         padding: 0 20px;
       }
     }
     &__message-list {
       background-color: #fafafa;
-      height: calc(100vh - 100px - 90px);
+      height: calc(100vh - #{$header-height} - #{$message-form-height});
       padding: 35px 40px;
       overflow: scroll;
       .message {
@@ -105,7 +111,7 @@
           margin-bottom: 12px;
           display: flex;
           &__talker {
-            color: #333333;
+            color: $main-name-color;
             font-size: 16px;
             font-weight: bold;
           }
@@ -123,7 +129,7 @@
     }
     &__message-form {
       background-color: #d2d2d2;
-      height: 90px;
+      height: $message-form-height;
       padding: 20px 40px;
       .new-message {
         display: flex;
@@ -151,7 +157,7 @@
           }
         }
         .submit-btn {
-          background-color: #38aef0;
+          background-color: $btn-color;
           color: #ffffff;
           font-size: 16px;
           line-height: 50px;
