@@ -63,8 +63,25 @@
   .main-chat__message-form
     %form.new-message
       .input-box
-        %input.input-box__text{:placeholder => "type a message", :type => "text"}
-        %label.input-box__image
-          = icon('fa', 'image')
-          %input.input-box__image__file(type="file")
-      %input.submit-btn{:type => "submit", :value => "Send"}
+        = form_for [@group, @message] do |f|
+          = f.text_field :body, class: 'input-box__text', placeholder: 'type a message'
+          .input-box__image
+            = f.label :image, class: 'input-box__image__file' do
+              = icon('fa', 'image')
+              = f.file_field :image
+            = f.submit 'Send', class: 'submit-btn'
+
+
+      -#   = form_for [@group, @message] do |f|
+      -#     = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      -#     .form__mask
+      -#       = f.label :image, class: 'form__mask__image' do
+      -#         = icon('fas', 'image', class: 'icon')
+      -#         = f.file_field :image, class: 'hidden'
+      -#     = f.submit 'Send', class: 'form__submit'
+
+      -#   %input.input-box__text{:placeholder => "type a message", :type => "text"}
+      -#   %label.input-box__image
+      -#     = icon('fa', 'image')
+      -#     %input.input-box__image__file(type="file")
+      -# %input.submit-btn{:type => "submit", :value => "Send"}
