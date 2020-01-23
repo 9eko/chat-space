@@ -2,13 +2,12 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group
-        group
+        = @group.name
       %ul.main-header__left-box__member-list
         Member :
         %li.main-header__left-box__member-list__member
-          name
-        %li.main-header__left-box__member-list__member
-          a
+          - @group.users.each do |member|
+            = member.name
     =link_to "#", class: "edit-btn" do
       Edit
   .main-chat__message-list
