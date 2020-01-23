@@ -125,11 +125,11 @@ $btn-color: #38aef0;
         }
       }
     }
-    &__message-form {
+    .form {
       background-color: #d2d2d2;
       height: $message-form-height;
       padding: 20px 40px;
-      .new-message {
+      .new_message {
         display: flex;
         .input-box {
           width: 100%;
