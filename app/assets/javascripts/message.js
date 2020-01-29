@@ -1,4 +1,44 @@
 $(function() {
+  function buildHTML(message) {
+    if ( message.image ) {
+      var html =
+      `<div class="message" data-message-id=${message.id}>
+        <div class="message__info">
+          <p class="message__info__talker">
+            ${message.user_name}
+          </p>
+          <p class="message__info__timestamp">
+            ${message.created_at}
+          </p>
+        </div>
+        <p class="message__text">
+          <p class="message__text__body">
+            ${message.body}
+          </p>
+        </p>
+        <img src=${message.image} >
+      </div>`
+      return html;
+    } else {
+      var html =
+        `<div class="message" data-message-id=${message.id}>
+          <div class="message__info">
+            <p class="message__info__talker">
+              ${message.user_name}
+            </p>
+            <p class="message__info__timestamp">
+              ${message.created_at}
+            </p>
+          </div>
+          <p class="message__text">
+            <p class="message__text__body">
+              ${message.body}
+            </p>
+          </p>
+        </div>`
+      return html;
+    };
+  }
 
   $('#new_message').on('submit', function(e) {
     e.preventDefault()
@@ -12,6 +52,9 @@ $(function() {
       processData: false,
       contentType: false
     })
-  });
+    .done(function(data){
+      var html = buildHTML(data);
+    })
+  })
 
 });
