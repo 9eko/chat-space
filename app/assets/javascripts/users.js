@@ -9,7 +9,17 @@ $(function() {
       dataType: "json"
     })
     .done(function(users) {
-      console.log("success");
+      $("#user-search-result").empty();
+
+      if (users.length !== 0) {
+        users.forEach(function(user) {
+          addUser(user);
+        });
+      } else if (input.length == 0) {
+        retun false;
+      } else {
+        addUser();
+      }
     })
     .fail(function() {
       console.log("fail")
