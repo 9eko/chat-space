@@ -101,8 +101,8 @@ $(function() {
     });
   };
 
-  if (document.location.href.match(/\/groups\/\d+\/main-chat__message-list/)) {
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
   }
-  
+
 });
