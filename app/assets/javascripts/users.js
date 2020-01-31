@@ -31,17 +31,24 @@ $(function() {
 
   function addMember(userId) {
     let html = `
-      <input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />
+      <input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" class="js-user"/>
     `;
     $(`#${userId}`).append(html);
   }
 
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
+    
+    let member = $(".js-user");
+    let arr = [];
+    member.each(function(member,ele){
+      arr.push(ele.value)
+    })
+
     $.ajax({
       type: "GET",
       url: "/users",
-      data: { keyword: input },
+      data: { keyword: input, userid: arr },
       dataType: "json"
     })
     .done(function(users) {
